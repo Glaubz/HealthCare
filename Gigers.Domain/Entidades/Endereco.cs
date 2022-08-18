@@ -1,4 +1,4 @@
-﻿namespace Gigers.Domain.Entidades
+﻿namespace HealthCare.Domain.Entidades
 {
     public class Endereco : Entity
     {

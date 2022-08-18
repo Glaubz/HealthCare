@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GigersApi", "GigersApi", "{6B847DCC-F01A-4031-9F30-3DCA302C4ADE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HealthCareApi", "HealthCareApi", "{6B847DCC-F01A-4031-9F30-3DCA302C4ADE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gigers.GigersApi", "Gigers.GigersApi\Gigers.GigersApi.csproj", "{D58F5443-2417-4986-864C-C6F862A3AF15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fit.HealthCareApi", "Gigers.GigersApi\Fit.HealthCareApi.csproj", "{D58F5443-2417-4986-864C-C6F862A3AF15}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gigers.Domain", "Gigers.Domain\Gigers.Domain.csproj", "{A2FC9C63-B269-48DC-B4B9-FA2CFE59C95B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCare.Domain", "Gigers.Domain\HealthCare.Domain.csproj", "{A2FC9C63-B269-48DC-B4B9-FA2CFE59C95B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{DD333FF6-EC11-432B-848B-28A93F406C87}"
 EndProject
@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9034CFC9-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{45069017-1B37-45D9-BED1-CF30BAE00E34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gigers.Infra.Data", "Gigers.Infra.Data\Gigers.Infra.Data.csproj", "{8BE4B2BB-9E31-4F9B-9169-24D13C8E000F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCare.Infra.Data", "Gigers.Infra.Data\HealthCare.Infra.Data.csproj", "{8BE4B2BB-9E31-4F9B-9169-24D13C8E000F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{18966B10-0695-48E6-A4D5-6CABCA6E146E}"
 EndProject

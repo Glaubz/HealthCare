@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Gigers.Domain.Entidades
+namespace HealthCare.Domain.Entidades
 {
     public abstract class Entity
     {

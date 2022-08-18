@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gigers.Domain\Gigers.Domain.csproj" />
+    <ProjectReference Include="..\Gigers.Domain\HealthCare.Domain.csproj" />
   </ItemGroup>
 
 </Project>

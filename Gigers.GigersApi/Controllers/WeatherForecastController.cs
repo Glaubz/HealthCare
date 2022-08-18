@@ -1,4 +1,4 @@
-﻿using Gigers.Domain.Entidades;
+﻿using HealthCare.Domain.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -6,21 +6,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Gigers.GigersApi.Controllers
+namespace HealthCare.HealthCareApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class GigersController : ControllerBase
+    public class HealthCareController : ControllerBase
     {
-        private readonly ILogger<GigersController> _logger;
+        private readonly ILogger<HealthCareController> _logger;
 
-        public GigersController(ILogger<GigersController> logger)
+        public HealthCareController(ILogger<HealthCareController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public IEnumerable<Gig> Get()
+        public IEnumerable<Academia> Get()
         {
             throw new NotImplementedException();
         }

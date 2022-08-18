@@ -1,4 +1,4 @@
-﻿namespace Gigers.Domain.Interfaces
+﻿namespace HealthCare.Domain.Interfaces
 {
     public interface IAggregateRoot
     {

@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Gigers.Domain\Gigers.Domain.csproj" />
-    <ProjectReference Include="..\Gigers.Infra.Data\Gigers.Infra.Data.csproj" />
+    <ProjectReference Include="..\Gigers.Domain\HealthCare.Domain.csproj" />
+    <ProjectReference Include="..\Gigers.Infra.Data\HealthCare.Infra.Data.csproj" />
   </ItemGroup>
 
 

@@ -1,8 +1,8 @@
-﻿using Gigers.Domain.Interfaces;
+﻿using HealthCare.Domain.Interfaces;
 
-namespace Gigers.Domain.Entidades
+namespace HealthCare.Domain.Entidades
 {
-    public class Giger : Entity, IAggregateRoot
+    public class Usuario : Entity, IAggregateRoot
     {
         public string Nome { get; set; }
         public string CPF { get; set; }
