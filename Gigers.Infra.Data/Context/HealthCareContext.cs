@@ -1,4 +1,5 @@
 ﻿using HealthCare.Domain.Entidades;
+using HealthCare.Infra.Data.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthCare.Infra.Data
