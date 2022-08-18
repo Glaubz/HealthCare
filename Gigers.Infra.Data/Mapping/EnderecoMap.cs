@@ -1,8 +1,8 @@
-﻿using Gigers.Domain.Entidades;
+﻿using HealthCare.Domain.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Gigers.Infra.Data.Mapping
+namespace HealthCare.Infra.Data.Mapping
 {
     public class EnderecoMap : IEntityTypeConfiguration<Endereco>
     {

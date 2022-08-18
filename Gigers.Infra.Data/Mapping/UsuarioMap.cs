@@ -1,12 +1,12 @@
-﻿using Gigers.Domain.Entidades;
+﻿using HealthCare.Domain.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Gigers.Infra.Data.Mapping
+namespace HealthCare.Infra.Data.Mapping
 {
-    public class GigerMap : IEntityTypeConfiguration<Giger>
+    public class UsuarioMap : IEntityTypeConfiguration<Usuario>
     {
-        public void Configure(EntityTypeBuilder<Giger> builder)
+        public void Configure(EntityTypeBuilder<Usuario> builder)
         {
             builder.Property(p => p.Nome).HasColumnType("VARCHAR(250)");
 
