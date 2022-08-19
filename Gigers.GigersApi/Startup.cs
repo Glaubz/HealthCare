@@ -25,6 +25,12 @@ namespace HealthCare.HealthCareApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(name: "v1",
+                             info: new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyApi", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +48,13 @@ namespace HealthCare.HealthCareApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint(url: "/swagger/v1/swagger.json", name: "Minha API V1");
             });
         }
     }
