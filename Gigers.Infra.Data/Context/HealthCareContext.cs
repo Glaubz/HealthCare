@@ -1,4 +1,5 @@
 ﻿using HealthCare.Domain.Entidades;
+using HealthCare.Infra.Data.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace HealthCare.Infra.Data
@@ -16,6 +17,8 @@ namespace HealthCare.Infra.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(HealthCareContext).Assembly);
+
+            modelBuilder.SeedData();
         }
     }
 }

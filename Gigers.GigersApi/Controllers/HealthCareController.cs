@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HealthCare.HealthCareApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/")]
     public class HealthCareController : ControllerBase
     {
         private readonly ILogger<HealthCareController> _logger;
@@ -19,9 +19,10 @@ namespace HealthCare.HealthCareApi.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet, Route("teste")]
         public IEnumerable<Academia> Get()
         {
+            Console.WriteLine("Entrou no Get");
             throw new NotImplementedException();
         }
     }
