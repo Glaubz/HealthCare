@@ -25,8 +25,20 @@ namespace HealthCare.HealthCareApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc(name: "v1",
-                             info: new Microsoft.OpenApi.Models.OpenApiInfo { Title = "MyApi", Version = "v1" });
+                c.OperationFilter<SwaggerDefaultValues>();
+            });
+
+            services.AddApiVersioning(options =>
+            {
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+                options.ReportApiVersions = true;
+            });
+
+            services.AddVersionedApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'VVV";
+                options.SubstituteApiVersionInUrl = true;
             });
 
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();

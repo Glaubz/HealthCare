@@ -3,13 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace HealthCare.HealthCareApi.Controllers
+namespace Fit.HealthCareApi.V1.Controllers
 {
     [ApiController]
-    [Route("api/")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/")]
     public class HealthCareController : ControllerBase
     {
         private readonly ILogger<HealthCareController> _logger;
@@ -23,6 +22,14 @@ namespace HealthCare.HealthCareApi.Controllers
         public IEnumerable<Academia> Get()
         {
             Console.WriteLine("Entrou no Get");
+            throw new NotImplementedException();
+        }
+
+
+        [HttpGet, Route("teste")]
+        public IEnumerable<Academia> Get2()
+        {
+            Console.WriteLine("Entrou no Get2");
             throw new NotImplementedException();
         }
     }
