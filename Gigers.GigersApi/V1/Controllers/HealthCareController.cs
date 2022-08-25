@@ -19,18 +19,18 @@ namespace Fit.HealthCareApi.V1.Controllers
         }
 
         [HttpGet, Route("teste")]
-        public IEnumerable<Academia> Get()
+        public Academia Get()
         {
             Console.WriteLine("Entrou no Get");
-            throw new NotImplementedException();
+            return new Academia();
         }
 
 
-        [HttpGet, Route("teste")]
-        public IEnumerable<Academia> Get2()
+        [HttpGet, Route("teste2")]
+        public Academia Get2()
         {
             Console.WriteLine("Entrou no Get2");
-            throw new NotImplementedException();
+            return new Academia();
         }
     }
 }
