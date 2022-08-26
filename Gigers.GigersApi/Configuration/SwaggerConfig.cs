@@ -1,10 +1,13 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Fit.HealthCareApi.Configuration
 {
@@ -15,6 +18,30 @@ namespace Fit.HealthCareApi.Configuration
             services.AddSwaggerGen(c =>
             {
                 c.OperationFilter<SwaggerDefaultValues>();
+
+                var _security = new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme
+                            }
+                        }, new string[] { }
+                    }
+                };
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "Insira o token JWT seguindo a sintaxe: Bearer {seu token}",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                });
+
+                c.AddSecurityRequirement(_security);
             });
 
             return services;
@@ -22,6 +49,9 @@ namespace Fit.HealthCareApi.Configuration
 
         public static IApplicationBuilder UseSwaggerConfig(this IApplicationBuilder app, IApiVersionDescriptionProvider provider)
         {
+            //Middleware para verificar autorização a documentação Swagger
+            //app.UseMiddleware<SwaggerAuthorizedMiddleware>();
+
             app.UseSwagger();
 
             app.UseSwaggerUI(
@@ -98,6 +128,27 @@ namespace Fit.HealthCareApi.Configuration
 
                 parameter.Required |= description.IsRequired;
             }
+        }
+    }
+
+    public class SwaggerAuthorizedMiddleware
+    {
+        private readonly RequestDelegate _next;
+
+        public SwaggerAuthorizedMiddleware(RequestDelegate next)
+        {
+            _next = next;
+        }
+
+        public async Task Invoke(HttpContext context)
+        {
+            if (context.Request.Path.StartsWithSegments("/swagger") && !context.User.Identity.IsAuthenticated)
+            {
+                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                return;
+            }
+
+            await _next.Invoke(context);
         }
     }
 }
