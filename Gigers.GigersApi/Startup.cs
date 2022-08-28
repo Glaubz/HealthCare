@@ -29,6 +29,8 @@ namespace HealthCare.HealthCareApi
             //    c.OperationFilter<SwaggerDefaultValues>();
             //});
 
+            services.AddIdentityConfiguration(Configuration);
+
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;
