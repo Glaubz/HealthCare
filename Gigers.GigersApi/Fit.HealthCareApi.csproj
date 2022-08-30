@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.28" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
@@ -15,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Fit.HealthCareApi.Application\Fit.HealthCareApi.Application.csproj" />
     <ProjectReference Include="..\Gigers.Domain\HealthCare.Domain.csproj" />
     <ProjectReference Include="..\Gigers.Infra.Data\HealthCare.Infra.Data.csproj" />
   </ItemGroup>

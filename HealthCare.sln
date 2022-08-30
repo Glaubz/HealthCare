@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCare.Infra.Data", "Gi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application", "02 - Application", "{18966B10-0695-48E6-A4D5-6CABCA6E146E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fit.HealthCareApi.Application", "Fit.HealthCareApi.Application\Fit.HealthCareApi.Application.csproj", "{A594ABFC-C4FF-4E13-A565-09D4F73E865B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{8BE4B2BB-9E31-4F9B-9169-24D13C8E000F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BE4B2BB-9E31-4F9B-9169-24D13C8E000F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BE4B2BB-9E31-4F9B-9169-24D13C8E000F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A594ABFC-C4FF-4E13-A565-09D4F73E865B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A594ABFC-C4FF-4E13-A565-09D4F73E865B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A594ABFC-C4FF-4E13-A565-09D4F73E865B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A594ABFC-C4FF-4E13-A565-09D4F73E865B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{45069017-1B37-45D9-BED1-CF30BAE00E34} = {2EAE768D-BA5E-4181-951F-F5066C329A9A}
 		{8BE4B2BB-9E31-4F9B-9169-24D13C8E000F} = {9034CFC9-120C-44AE-AF92-8F23D8231550}
 		{18966B10-0695-48E6-A4D5-6CABCA6E146E} = {6B847DCC-F01A-4031-9F30-3DCA302C4ADE}
+		{A594ABFC-C4FF-4E13-A565-09D4F73E865B} = {18966B10-0695-48E6-A4D5-6CABCA6E146E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D87719F6-0273-4967-A798-C751A9E10A08}
